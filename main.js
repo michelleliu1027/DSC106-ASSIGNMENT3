@@ -647,7 +647,11 @@
                             style:{
                                 fontSize: '18px',
                                 fontFamily:"Times New Roman",
+                                color: '#333'
                             }
+                        },
+                        tooltip:{
+                            enabled:false
                         },
                         legend: false,
                         series: [{
@@ -693,7 +697,9 @@
                 title: {
                     text: null
                 },
-                visible: true
+                visible: true,
+                fontFamily:"Times New Roman",
+                color:'#333'
             },
             yAxis: {
                 visible:false
@@ -716,6 +722,7 @@
 
                 }
             }
+            
         },
             series: [{
                 data: [{y: tot_black_coal / total, color: '#000000'},

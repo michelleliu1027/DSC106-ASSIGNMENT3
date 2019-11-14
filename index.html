@@ -1,0 +1,144 @@
+<html>
+
+
+<!----------------------------- head start---------------------------------------->
+   <head>
+
+      <meta charset="UTF-8">
+      <meta name="author" content="MichelleYijun LiuLiu">
+      <!-- <meta name="viewport" contetn="width=device-width, initial-scale=1.0"> -->
+      <title>
+        Springfield Report
+      </title>
+      <link rel="stylesheet" type="text/css" href="main.css">
+   </head>
+<!----------------------------- head end---------------------------------------->
+<!-- <script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/data.js"></script> -->
+<script src="/assets/highcharts.js"></script>
+<script src="/assets/data.js"></script>
+
+
+
+<!----------------------------- body starts---------------------------------------->
+<body>
+
+
+    <!-- Page Header Table -->
+    <table id = "headPicText">
+      <tr>
+        <td width="100%">
+           <p>
+               <img id = "simpson" src = "/assets/homer-simpson-3_400x400.jpg" >
+               <t id = "headText"><b>Energy   Springfield</b></t>
+           </p>
+      </td>
+      </tr>
+    </table>
+
+    <!-- Chart Placement Table -->
+    <table class="simpleTable greaterArea">
+      <tr>
+        <td height = '100px' rowspan="2" id="sharedGrid">
+        </td>
+
+        <td id="legendGrid" >
+         <div class = 'tableGrid'>
+               <p id = "time" style = "text-align: right;font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;font-size:20px;" >20 Oct, 1:55PM - 27 Oct, 1:25PM</p>
+               <table   class = 'dynamicTable'>
+                     <tr class = 'titles'>
+                           <th> </th>
+                           <th >Power<br><t style = "color:gray; opacity: 0.5; font-size: 13px; text-align:right">MW</t></th> 
+                           <th >Contribution<br><t style = "color:gray; opacity: 0.5; font-size: 13px; text-align:right">to demand</t></th>
+                           <th >AvValue<br><t style = "color:gray; opacity: 0.5; font-size: 13px; text-align:right">$/MWh</t></th>
+                     </tr>
+                     <tr>
+                           <th class = "firstCol">Sources</th>
+                           <td>1179</td>
+                           <td>  </td>
+                           <td><b>$58.62</b></td>
+                     </tr>
+                     
+                     <tr>
+                           <td class = "firstCol"><span class='one'></span>black_coal</td>
+                           <td>891</td>
+                           <td>76.5%</td>
+                           <td>$59.01</td>
+         
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='two'></span>distillate</td>
+                           <td>0.02</td>
+                           <td>0.002%</td>
+                           <td>$57.42</td>
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='three'></span>Gas(CCGT)</td>
+                           <td>65</td>
+                           <td>5.6%</td>
+                           <td>$60.22</td>
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='four'></span>hydro</td>
+                           <td>60</td>
+                           <td>5.1%</td>
+                           <td>$63.96</td>
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='five'></span>wind</td>
+                           <td>81</td>
+                           <td>7.0%</td>
+                           <td>$56.43</td>
+                     </tr>
+                     <tr>
+                           <th class = "firstCol">Loads</td>
+                           <td>-15</td>
+                           <td>  </td>
+                           <td>  </td>
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='six'></span>Exports</td>
+                           <td>-2</td>
+                           <td>-0.2%</td>
+                           <td>$65.36</td>
+                     </tr>
+                     <tr>
+                           <td class = "firstCol"><span class='seven'></span>Pumps</td>
+                           <td>-12</td>
+                           <td>-1.0%</td>
+                           <td>$46.49</td>
+                     </tr>
+                     <tr>
+                           <th class = "firstCol">Net</td>
+                           <td>1165</td>
+                           <td>  </td>
+                           <td>  </td>
+                     </tr>
+                     <tr>
+                           <th class = "firstCol">Renewables</td>
+                           <td> </td>
+                           <td>19.2%</td>
+                           <td> </td>
+                     </tr>
+                  </table>
+         </div>
+
+        </td>
+      </tr>
+      <tr>
+        <td align = center> 
+            <button id = pieBotton onclick="pieChart()" >pie</button> 
+            <button id = barBotton onclick="barChart()"> bar </button>  
+                  <div class = "barGrid"></div>
+                  <div  class = "pieGrid"></div>
+        </td>
+      </tr>
+    </table>
+
+    <!-- Internal JS Import -->
+    <script src="main.js"></script>
+   </body>
+<!------------------------- body ends --------------------------------------------->
+
+
+</html>

@@ -1,0 +1,151 @@
+body{
+    background-color: #ece9e6
+}
+#sharedGrid{
+    width: 800px;
+    /* margin-top: 80%; */
+    padding: 10px;
+    background-color: #ece9e6
+
+}
+
+/* #headPicText {
+    width: 90%;
+    margin-left: 5%;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} */
+
+#simpson{
+    border-radius: 50%;
+    position: relative;
+    left: 0px;
+    top:30px;
+    width:30px;
+    height:30px;
+  }
+
+#headText{
+    position: relative;
+    left: 10px;
+    top:20px;
+    font-size: 20px
+}
+
+
+
+.chart0 {
+    min-width: 700px;
+    height: 300px;
+    margin: 0 auto;
+    
+}
+.chart1{
+    min-width: 320px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.chart2{
+   
+    min-width: 320px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.barGrid{
+    display: none;
+}
+
+#pieBotton{
+    background-color:white;
+    outline:none;
+    border-radius: 30%;
+    /* margin: 0 auto; */
+    width: 50px;
+    height: 30px;
+    float: center;
+
+}
+#pieBotton:focus {
+    background: #CA5131;
+  }
+
+#barBotton{
+    background-color:white;
+    outline:none;
+    border-radius: 30%;
+    /* margin: 0 auto; */
+    width: 50px;
+    height: 30px;
+}
+#barBotton:focus {
+    background:#CA5131;
+  }
+
+
+.pieGrid{
+    display: block;
+}
+
+
+.dynamicTable{
+    border-collapse: collapse;
+    width: 550px;
+    height:100px;
+
+}
+.dynamicTable tr { 
+    border-top: 1px solid #bfbfbf; 
+    text-align: center;}
+
+.firstCol{
+    text-align: left;
+    
+}
+
+.dynamicTable tr:first-child th {
+    border-top: 3px solid black;
+}
+
+
+.dynamicTable tr:last-child th {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+    font-family: 'Times New Roman', Times, serif
+}
+
+.dynamicTable tr:last-child td {
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
+
+
+
+table.dynamicTable tr:nth-child(3) span{  
+    width: 12px; 
+    height: 12px; 
+    background:black;  
+    display:inline-block; 
+}
+
+
+table.dynamicTable tr:nth-child(4) span{  
+    width: 12px; height: 12px; background:red;  display:inline-block; margin-right:px 
+}
+
+table.dynamicTable tr:nth-child(5) span{
+    width: 12px; height: 12px; background: #ff9966;  display:inline-block; margin-right:px }
+table.dynamicTable tr:nth-child(6) span{  
+    width: 12px; height: 12px; background:#4d79ff;  display:inline-block; margin-right:px 
+}
+table.dynamicTable tr:nth-child(7) span{  
+    width: 12px; height: 12px; background:#006622;  display:inline-block; margin-right:px 
+}
+table.dynamicTable tr:nth-child(9) span{  
+    width: 12px; height: 12px; background: #9966ff;  display:inline-block; margin-right:px 
+}
+table.dynamicTable tr:nth-child(10) span{  
+    width: 12px; height: 12px; background:#6699ff;  display:inline-block; margin-right:px 
+}

@@ -1,22 +1,21 @@
-head{
-    background-color: #ece9e6;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-}
 body{
-    background-color: #ece9e6;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color: #333
+    background-color: #ece9e6
 }
 #sharedGrid{
     width: 800px;
     /* margin-top: 80%; */
     padding: 10px;
-    background-color: #ece9e6;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-
+    background-color: #ece9e6
 
 }
 
+/* #headPicText {
+    width: 90%;
+    margin-left: 5%;
+    border: none;
+    margin-bottom: 10px;
+    margin-top: 10px;
+} */
 
 #simpson{
     border-radius: 50%;
@@ -31,9 +30,7 @@ body{
     position: relative;
     left: 10px;
     top:20px;
-    font-size: 20px;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-
+    font-size: 20px
 }
 
 
@@ -42,17 +39,12 @@ body{
     min-width: 700px;
     height: 300px;
     margin: 0 auto;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color:#333
     
 }
-
 .chart1{
     min-width: 320px;
     height: 200px;
     margin: 0 auto;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color:#333
 }
 
 .chart2{
@@ -60,8 +52,6 @@ body{
     min-width: 320px;
     height: 200px;
     margin: 0 auto;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color:#333
 }
 
 .barGrid{
@@ -76,9 +66,6 @@ body{
     width: 50px;
     height: 30px;
     float: center;
-    color:#333;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-
 
 }
 #pieBotton:focus {
@@ -92,8 +79,6 @@ body{
     /* margin: 0 auto; */
     width: 50px;
     height: 30px;
-    color:#333;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
 }
 #barBotton:focus {
     background:#CA5131;
@@ -117,13 +102,7 @@ body{
 
 .firstCol{
     text-align: left;
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color: #333
     
-}
-.rows{
-    font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif;
-    color: #333
 }
 
 .dynamicTable tr:first-child th {
@@ -150,7 +129,6 @@ table.dynamicTable tr:nth-child(3) span{
     background:black;  
     display:inline-block; 
 }
-
 
 
 table.dynamicTable tr:nth-child(4) span{  

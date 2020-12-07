@@ -2,13 +2,13 @@
     document.getElementById('sharedGrid').addEventListener(
         'mousemove',
         function(e) {
-            // console.log(e)
             var chart,
                 point,
                 i,
                 event;
             for (i = 0; i < 3; i = i + 1) {
                 chart = Highcharts.charts[i];
+                console.log(chart)
                 // Find coordinates within the chart
                 event = chart.pointer.normalize(e);
                 // Get the hovered point
@@ -21,28 +21,27 @@
                     point.highlight(e);
                     pie_data = springfield[point.x]
                     window.total = pie_data[0] + pie_data[1] + pie_data[2] + pie_data[3] + pie_data[5]+pie_data[6]
-                    window.bar_plotted.series[0].setData([pie_data[0] / total, 
-                        pie_data[1] / total, 
-                        pie_data[2] / total, 
-                        pie_data[3] / total, 
+                    window.bar_plotted.series[0].setData([pie_data[0] / total,
+                        pie_data[1] / total,
+                        pie_data[2] / total,
+                        pie_data[3] / total,
                         pie_data[5] / total])
-                    
+
                     data_for_pie_chart = [pie_data[5],pie_data[3], pie_data[2],pie_data[1],pie_data[0]]
                     window.pie_plotted.series[0].setData(data_for_pie_chart)
                     window.pie_plotted.setTitle({text: parseInt(window.total)+ '  MW'})
 
 
-                    // if (chart.renderTo.className == )
-    
-    
+
+
                     // ///////////////////// plot the table area ////////////////////////////////
                     sum_sources = 0
                     sum_loads = 0
                     bar_datas = []
-    
+
                     for (a = 0, j = 2; a < 7; a++) {
                         if (a !== 4 && a !== 6) {
-    
+
                             window.dynamicTable.rows[j].cells[1].innerHTML = springfield[point.x][a];
                             sum_sources += springfield[point.x][a]
                             j++;
@@ -64,7 +63,7 @@
                             }
                         }
                     }
-                    
+
                     window.dynamicTable.rows[1].cells[1].innerHTML = sum_sources.toFixed(2)
                     if (sum_loads == 0){
                         window.dynamicTable.rows[7].cells[1].innerHTML = '-'
@@ -100,11 +99,11 @@
                             }
                         }
                     }
-                    renewals = parseFloat(window.dynamicTable.rows[5].cells[2].innerHTML.substring(0, window.dynamicTable.rows[5].cells[2].innerHTML.length - 1)) 
+                    renewals = parseFloat(window.dynamicTable.rows[5].cells[2].innerHTML.substring(0, window.dynamicTable.rows[5].cells[2].innerHTML.length - 1))
                     + parseFloat(window.dynamicTable.rows[6].cells[2].innerHTML.substring(0, window.dynamicTable.rows[6].cells[2].innerHTML.length - 1))
                     window.dynamicTable.rows[11].cells[2].innerHTML = renewals.toFixed(2).toString() + '%'
-    
-    
+
+
                     window.dynamicTable.rows[1].cells[3].innerHTML = '$'+parseInt(price_data_time[point.x])
                     for (row_num = 2; row_num < 12; row_num++){
                         if (row_num == 7 || row_num == 10||row_num ==11){
@@ -138,8 +137,8 @@
      * Synchronize zooming through the setExtremes event handler.
      */
     function syncExtremes(e) {
-        
-        var thisChart = this.chart; 
+
+        var thisChart = this.chart;
         if (e.trigger !== 'syncExtremes') { // Prevent feedback loop
             Highcharts.each(Highcharts.charts, function(chart) {
                 if (chart !== thisChart) {
@@ -157,19 +156,19 @@
             });
         }
     }
-    
+
     function barChart() {
         ele = document.getElementsByClassName('barGrid')[0];
         ele1 = document.getElementsByClassName('pieGrid')[0];
-    
+
         ele1.style.display = "none";
         ele1.style.visibility = 'hidden';
         ele.style.visibility = 'visible';
         ele.style.display = "block";
-    
-    
+
+
     }
-    
+
     function pieChart() {
         ele = document.getElementsByClassName('barGrid')[0];
         ele.style.visibility = 'hidden';
@@ -188,9 +187,9 @@
 
     // Get the data. The contents of the data file can be viewed at
     Highcharts.ajax({
-        url: "/springfield.json",
+        url: "springfield.json",
         dataType: 'text',
-    
+
         success: function(activity) {
             activity = JSON.parse(activity);
             power_series = []
@@ -206,7 +205,7 @@
             price_data = []
             price_data_time = {}
             color_for_plot = ['#9966ff', '#006622', '#6699ff', '#4d79ff', '#ff9966', 'red','#000000'].reverse()
-    
+
             ///////////////////////////////preprocessing data part//////////////////////////////
             for (i = 0, len = activity.length; i < len; i++) {
                 if (activity[i].type == 'power' && activity[i].fuel_tech != 'rooftop_solar') {
@@ -214,7 +213,7 @@
                     noted_interval = parseInt(activity[i].history.interval.substring(0)) //inteval for each cate in min
                     plot_data = []
                     power_data = []
-    
+
                     for (time = 1571579700, placeholder = 0; time < 1572183000; placeholder++) {
                         if ((placeholder * noted_interval) % 30 == 0) {
                             if (times.length < 336) {
@@ -231,7 +230,7 @@
                         time = time + noted_interval * 60;
                     }
                     power_datas.push(power_data)
-    
+
                     if(activity[i].fuel_tech == 'exports'){
                         power_series.push({
                             name: activity[i].fuel_tech,
@@ -250,7 +249,7 @@
                             stack: 'II'
                     })
                     }
-                    
+
                     if (count == 7) { ///////with rooftop will become 8
                         to_plot.push({
                             name: 'Generation',
@@ -279,10 +278,10 @@
                 }
             }
             // console.log(power_series)
-            
-            
+
+
             /////////////constructing global datastructure for extracting data/////////////////////////
-            
+
             for (t = 0; t < times.length; t++) {
                 data_to_add = []
                 for (d = 0; d < power_datas.length; d++) {
@@ -310,9 +309,9 @@
                 tot_wind += springfield[times[a]][5];
             }
             ///////////////preprocessing data part////////////////////////////////////////////////////////////
-    
+
             //////////////////////////////Synchronized graph///////////////////////////////////////////////////
-            
+
             to_plot.forEach(function(dataset, i) {
                 var chartDiv = document.createElement('div');
                 chartDiv.className = 'chart'+i;
@@ -325,7 +324,7 @@
                             spacingTop: 20,
                             spacingBottom: 20,
                             backgroundColor: 'transparent'
-                            
+
                         },
                         title: {
                             text: dataset.name,
@@ -409,7 +408,7 @@
 
                                     return '<span style=\"background-color:rgb(203, 76, 89,0.15); border-radius: 15%">'+'<b>'+document.getElementById('time').innerHTML+'</b>'+'  '+'</span> '+
                                     '<span style=\"background-color:rgb(255, 255, 255,0.3); border-radius: 15%">'+'  Total: '+'<b>' + window.total.toFixed(2) +'</b>'+'MW'+'</span> '
-                              
+
                             },
                             borderWidth: 0,
                             backgroundColor: 'none',
@@ -510,16 +509,16 @@
                                         y: 10 // align to title
                                     };
                                 },
-    
+
                                 formatter: function(){
                                     console.log(this)
                                         time = Highcharts.dateFormat('%e %b, %l:%M %p',this.x);
                                         price = this.y
                                         return '<span style=\"background-color:rgb(203, 76, 89,0.15); border-radius: 15%">'+'<b>'+time+'</b>'+'</span> '+
                                         '<span style=\"background-color:rgb(255, 255, 255,0.7); border-radius: 15%">'+'     $'+'<b>'+price+'</b>'+'</span> '
-                                    
+
                                 },
-    
+
                                 backgroundColor: 'none',
                                 borderWidth: 0,
                                 shadow: false,
@@ -597,7 +596,7 @@
                                         y: 10 // align to title
                                     };
                                 },
-    
+
                                 formatter: function(){
                                     // console.log(i)
                                         time = Highcharts.dateFormat('%e %b, %l:%M %p',this.x);
@@ -605,7 +604,7 @@
                                         return '<span style=\"background-color:rgb(203, 76, 89,0.15); border-radius: 15%">'+'<b>'+time+'</b>'+'</span> '+
                                         '<span style=\"background-color:rgb(255, 255, 255,0.7); border-radius: 15%; ">'+'Av'+'<b>'+temperature+' ºF </b>'+'</span> '
                                     },
-    
+
                                 backgroundColor: 'none',
                                 borderWidth: 0,
                                 shadow: false,
@@ -621,7 +620,7 @@
                 }
             });
 
-        
+
         pie_plot_where = document.getElementsByClassName('pieGrid')[0]
         // console.log(pie_plot_where)
 
@@ -647,11 +646,7 @@
                             style:{
                                 fontSize: '18px',
                                 fontFamily:"Times New Roman",
-                                color: '#333'
                             }
-                        },
-                        tooltip:{
-                            enabled:false
                         },
                         legend: false,
                         series: [{
@@ -666,7 +661,7 @@
                                 name: 'distillate',
                                 y: tot_distillate / 336,
                                 color: 'red'
-    
+
                             }, {
                                 name: 'gas_ccgt',
                                 y:tot_gas_ccgt / 336,
@@ -683,7 +678,7 @@
                         }]
                     });
 
-        
+
         total = tot_black_coal+tot_distillate+tot_gas_ccgt+tot_hydro+tot_wind
         // console.log(tot_black_coal /336)
         bar_plot_where = document.getElementsByClassName('barGrid')[0]
@@ -697,9 +692,7 @@
                 title: {
                     text: null
                 },
-                visible: true,
-                fontFamily:"Times New Roman",
-                color:'#333'
+                visible: true
             },
             yAxis: {
                 visible:false
@@ -722,13 +715,12 @@
 
                 }
             }
-            
         },
             series: [{
                 data: [{y: tot_black_coal / total, color: '#000000'},
                     {y: tot_distillate / total, color: 'red'},
-                    {y: tot_gas_ccgt / total, color: '#ff9966'}, 
-                    {y: tot_hydro / total, color: '#4d79ff'}, 
+                    {y: tot_gas_ccgt / total, color: '#ff9966'},
+                    {y: tot_hydro / total, color: '#4d79ff'},
                     {y: tot_wind/ total, color: '#006622'}]
             }]
         })

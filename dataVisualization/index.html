@@ -11,13 +11,14 @@
         Springfield Report
       </title>
       <link rel="stylesheet" type="text/css" href="main.css">
-   </head>
 <!----------------------------- head end---------------------------------------->
 <!-- <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/modules/data.js"></script> -->
-<script src="/assets/highcharts.js"></script>
-<script src="/assets/data.js"></script>
-
+<!-- <script src="//code.jquery.com/jquery-1.12.0.min.js"></script> -->
+<!-- <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script> -->
+<script src="assets/highcharts.js"></script>
+<script src="assets/data.js"></script>
+</head>
 
 
 <!----------------------------- body starts---------------------------------------->
@@ -29,7 +30,7 @@
       <tr>
         <td width="100%">
            <p>
-               <img id = "simpson" src = "/assets/homer-simpson-3_400x400.jpg" >
+               <img id = "simpson" src = "assets/homer-simpson-3_400x400.jpg" >
                <t id = "headText"><b>Energy   Springfield</b></t>
            </p>
       </td>
@@ -48,7 +49,7 @@
                <table   class = 'dynamicTable'>
                      <tr class = 'titles'>
                            <th rows> </th>
-                           <th rows>Power<br><t style = "font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif; color:gray; opacity: 0.5; font-size: 13px; text-align:right">MW</t></th> 
+                           <th rows>Power<br><t style = "font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif; color:gray; opacity: 0.5; font-size: 13px; text-align:right">MW</t></th>
                            <th rows>Contribution<br><t style = "font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif; color:gray; opacity: 0.5; font-size: 13px; text-align:right">to demand</t></th>
                            <th rows>AvValue<br><t style = "font-family:IBM Plex Serif,Georgia,Times New Roman,Times,serif; color:gray; opacity: 0.5; font-size: 13px; text-align:right">$/MWh</t></th>
                      </tr>
@@ -58,13 +59,13 @@
                            <td class = "rows">  </td>
                            <td class = "rows"><b>$58.62</b></td>
                      </tr>
-                     
+
                      <tr>
                            <td class = "firstCol"><span class='one'></span>black_coal</td>
                            <td class = "rows">891</td>
                            <td class = "rows">76.5%</td>
                            <td class = "rows">$59.01</td>
-         
+
                      </tr>
                      <tr>
                            <td class = "firstCol"><span class='two'></span>distillate</td>
@@ -126,9 +127,9 @@
         </td>
       </tr>
       <tr>
-        <td align = center> 
-            <button id = pieBotton onclick="pieChart()" >pie</button> 
-            <button id = barBotton onclick="barChart()"> bar </button>  
+        <td align = center>
+            <button id = pieBotton onclick="pieChart()" >pie</button>
+            <button id = barBotton onclick="barChart()"> bar </button>
                   <div class = "barGrid"></div>
                   <div  class = "pieGrid"></div>
         </td>

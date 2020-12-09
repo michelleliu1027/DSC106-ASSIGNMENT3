@@ -130,6 +130,11 @@ a:hover {
 
 }
 
+.jdDescrip{
+  text-align:left;
+  text-indent:20px;
+}
+
 /*--/ Sections /--*/
 .sect-4 {
   padding: 4rem 0;
@@ -142,6 +147,12 @@ a:hover {
 .sect-mt4 {
   margin-top: 4rem;
 }
+
+.btn {
+  background-color: #4e4e4e;
+  color: #fff;
+}
+
 
 /*--/ Title s /--*/
 .title-s {
@@ -326,7 +337,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #0078ff;
+  background: #4e4e4e;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -534,26 +545,26 @@ a:hover {
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
+  background-color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
+  color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
+  color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
+  color: #4e4e4e;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
@@ -671,6 +682,7 @@ a:hover {
   color: #fff;
   font-weight: 600;
   font-size: 3rem;
+  font-family: 'Cutive Mono', monospace;
 }
 
 @media (min-width: 768px) {
@@ -682,6 +694,7 @@ a:hover {
 .intro .intro-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
+  font-family: 'Cutive Mono', monospace;
 }
 
 @media (min-width: 768px) {
@@ -782,7 +795,7 @@ a:hover {
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #0078ff;
+  background-color: #4e4e4e;
   box-shadow: 0 0 0 10px #cde1f8;
 }
 
@@ -1370,7 +1383,7 @@ footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
-  background: #0062d3;
+  background: #4e4e4e;
 }
 
 footer .copyright {

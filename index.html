@@ -12,7 +12,8 @@
   <!-- Favicons -->
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -37,7 +38,7 @@
   <!-- ======= Header/ Navbar ======= -->
   <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll" href="#page-top">Hello, There ;D</a>
+      <a class="navbar-brand js-scroll" href="#page-top">Hello, There</a>
       <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault" aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span></span>
         <span></span>
@@ -112,19 +113,19 @@
                     <p class="title-s">Skill</p>
                     <span>Python</span> <span class="pull-right">85%</span>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 85%; background-color: #4e4e4e;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <span>SQL</span> <span class="pull-right">75%</span>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 75%;background-color: #4e4e4e;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <span>CSS / HTML / JavaScript</span> <span class="pull-right">70%</span>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 70%;background-color: #4e4e4e;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <span>Java</span> <span class="pull-right">60%</span>
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="progress-bar" role="progressbar" style="width: 60%;background-color: #4e4e4e;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                   </div>
                 </div>
@@ -134,10 +135,9 @@
                       <h5 class="title-left">
                         About me
                       </h5>
+                      <div>
+                        <iframe  src="https://drive.google.com/file/d/12ZG8dMNoC3jYnWRDH4kyrfX8lHMbrJe5/preview" width="480" height="480"></iframe>                      </div>
                     </div>
-                    <p class="lead">
-                      Hi, I am Michelle, an undergraduate majoring in Data Science from UC San Diego.
-                    </p>
                   </div>
                 </div>
               </div>
@@ -174,10 +174,10 @@
                 <button type="button" class="btn btn-primary btn-tutor" data-toggle="modal" data-target=".bd-example-modal-lg-1">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did there</h1>
+                        <h1 class="jdDescrip">What I did there</h1>
                         <ul>
                           <li>Have been tutoring for 1 year and 3 months, total for 5 quarters. Tutored courses: DSC80 and DSC20 (Professor Aaron Fraenkel, and Professor Marina Langlois)</li>
                           <li>Taught Python basics, including cleaning messy data, visualizing data, scraping data, HTML, Regex and machine learning concepts.</li>
@@ -258,10 +258,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">See More</button>
 
                 <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did there</h1>
+                        <h1 class="jdDescrip">What I did there</h1>
                         <ul>
                           <li>Exported data of competitions among streamers, and analyzed strategic feasibility to promote the formulation of business-related strategies.</li>
                           <li>Followed abnormal data, collected revenue data of streamers with SQL, and confirmed the correlation between abnormal data and strategic changes.</li>
@@ -287,10 +287,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg-6">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-6" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did there</h1>
+                        <h1 class="jdDescrip">What I did there</h1>
                         <ul>
                           <li>Helped Operator Network Center discover the past 3-month behavioral data of unsubscribed users in June by extracting data with SQL from online dataset, cleaning and mining with Python and Excel, exploring abnormal data with Exploratory Data Analysis, and training clustering model (KMeans) with scikitlearn library to extract features</li>
                           <li>Presented weekly and monthly reports about the subscription information by visualizing with PowerPoint and worked closely with Marketing Department to analyze those abnormal data and explore users’ intensives behind those data.</li>
@@ -333,10 +333,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg-2">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did</h1>
+                        <h1 class="jdDescrip">What I did</h1>
                         <ul>
                           <li>Designed a dashboard that enabled users to interact with data by real-time mouse moves.</li>
                           <li>Realized data visualization with Highcharts Library, cleaned the original data and designed the data structure with JavaScript, typeset the web page with HTML, and beautified the page with CSS in designing.</li>
@@ -363,10 +363,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg-3">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did</h1>
+                        <h1 class="jdDescrip">What I did</h1>
                         <ul>
                           <li>Developed data uploader by using Python to transform pictures with names into a table with columns (name and extracted features) for later training part in this project.</li>
                           <li>Extracted facial mark features with Dlib library on sampled dataset with emotion-labeled pictures, and applied a supervised learning algorithm on those facial marks to train an emotional detector model, achieving a highest accuracy of 89.43% with logistic regression.</li>
@@ -390,10 +390,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg-4">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did</h1>
+                        <h1 class="jdDescrip">What I did</h1>
                         <ul>
                           <li>Collected flight information of U.S. flights in 2015, and found that flight delays were related to location, time and airlines through feature engineering; Built an optimal model based on the decision tree model for predicting flight delays according to the above characteristics, and achieved an accuracy rate of 62%.</li>
                           <li>Was selected as the outstanding project representative of the semester.</li>
@@ -420,10 +420,10 @@
                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg-5">See More</button>
 
                 <div class="modal fade bd-example-modal-lg-5" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
+                  <div class="modal-dialog modal-xl">
                     <div class="modal-content">
                       <p class="s-description text-center">
-                        <h1>What I did</h1>
+                        <h1 class="jdDescrip">What I did</h1>
                         <ul>
                           <li>Took responsible for data extracting; Assisted in extracting features of Henri Matisse and Pablo Picasso’s paintings, and trained an arbitrary tree model based on RMS Contrast and Average Entropy, with a model classification accuracy of up to 83.3%.</li>
                           <iframe src="https://drive.google.com/file/d/1qhPd_f94xGOTPGQF1C0S_T3L8R3OWzOp/preview" width="640" height="480"></iframe>

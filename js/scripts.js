@@ -47,7 +47,7 @@ function copy() {
   };
 
 function showqrcode(){
-    var sourceOfPicture = "assets/img/qrcode.jpg";
+    var sourceOfPicture = "assets/img/qrcode.JPG";
     var img = document.getElementById('wechatqr')
     img.setAttribute("src", sourceOfPicture)
     img.style.display = "block";
